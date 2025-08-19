@@ -4,7 +4,7 @@ import back from "../../assets/images/my-account.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../../context/Context";
 import axios from "axios";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -91,6 +91,10 @@ export const Login = () => {
               </div>
             </div>
 
+            <p className="forgot-password-link">
+              <Link to="/forgot-password">Forgot Password?</Link>
+            </p>
+
             {error && <p className="error-message">{error}</p>}
 
             <button className="button" type="submit" disabled={FetchData}>
@@ -102,7 +106,7 @@ export const Login = () => {
             </p>
           </form>
         </div>
-        {/* <ToastContainer /> */}
+        
       </section>
     </>
   );
